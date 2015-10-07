@@ -1,0 +1,13 @@
+<h1>My Wallet Application</h1>
+
+<% @users.each do |user| %>
+  <div>
+    <%= user.first_name %>
+    <%= link_to 'Cards', card_path(user) %>
+    <%= link_to 'Edit', edit_user_path(user) %>
+  </div>
+
+<% end %>
+
+
+<p></p>
