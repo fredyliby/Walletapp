@@ -12,24 +12,25 @@ class UsersController < ApplicationController
       redirect_to users_path
     else
       flash[:alert] = "There was a problem."
-     render :new
-  end 
-
-  def new
-  	@user = User.new
-  end
-
-  def show
-   @user = User.find params[:id]
-  end
-
-
-  def edit
+      render :new
+    end 
 
   end
+    def new
+     @user = User.new
+   end
+
+   def show
+     @user = User.find params[:id]
+   end
 
 
-  def update
+   def edit
+
+   end
+
+
+   def update
 
     @user = User.find params[:id]
 
@@ -38,7 +39,7 @@ class UsersController < ApplicationController
     if user_params[:password].blank?
       p.delete(:password)
       p.delete(:password_confirmation)
-  end
+    end
 
     @user.update! p
 
@@ -55,11 +56,12 @@ class UsersController < ApplicationController
     flash[:notice] = "Bye."
     redirect_to users_path
   end
+
   private
   def user_params
     params.require(:user).permit(:username, :password)
   end
 
-end
+
 end
 

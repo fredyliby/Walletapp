@@ -18,6 +18,7 @@ class CardsController < ApplicationController
 	def create
 	  	@card = Card.new(card_params)
 	  	@card.save!
+	  	redirect_to new_card_path
 	end	 
 
 	def show
@@ -30,8 +31,10 @@ class CardsController < ApplicationController
 	def update
 	end
 
+	private
+
 	def card_params
- 		params.require(:card).permit(user_ids:[])
+ 		params.require(:card).permit(:number, :expiration, :month, :year)
 	end
 	
 end

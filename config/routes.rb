@@ -22,5 +22,6 @@ Rails.application.routes.draw do
   resources :users
   resources :cards
   resources :sessions
+  resources :user_cards
   
 end

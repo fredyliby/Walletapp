@@ -4,9 +4,9 @@ class User < ActiveRecord::Base
 
 	validates :email, uniqueness: true
 	validates :phone, format: { with: /\d{3}-\d{3}-\d{4}/}
-	validates :firstname, presence: true 
-	validates :lastname, presence: true
-	validates :price, :presence => true, :numericality => { :greater_than => 0 }
+	validates :first_name, presence: true 
+	validates :last_name, presence: true
+	# validates :price, :presence => true, :numericality => { :greater_than => 0 }
 
 	before_destroy :destroy_solely_owned_cards
 
