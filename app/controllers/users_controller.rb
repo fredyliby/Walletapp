@@ -5,19 +5,31 @@ class UsersController < ApplicationController
   end
 
   def create
-  	@user = User.create user_params
+  	@user = User.create (user_params)
     if @user.valid?
-      flash[:notice] = "Thanks for signing up"
+      flash[:notice] = "Thank you for signing up"
       session[:user_id] = @user.id
-      redirect_to users_path
+      redirect_to @user
     else
       flash[:alert] = "There was a problem."
       render :new
     end 
-
   end
     def new
      @user = User.new
+   end
+
+   def addcard
+    user_card = params[:user_card]
+    user = params[:user_id]
+    card = user_card[:card_id]
+    if @user = User.find(user)
+      flash[:notice] = "ADDED CARD"
+      @user.cards << Card.find(card)
+      # @user.cards.uniq{|x| x.id}
+
+    end
+     redirect_to @user
    end
 
    def show
@@ -59,7 +71,7 @@ class UsersController < ApplicationController
 
   private
   def user_params
-    params.require(:user).permit(:username, :password)
+    params.require(:user).permit(:username, :password, :email, :phone, :first_name, :last_name, :card_balance)
   end
 
 

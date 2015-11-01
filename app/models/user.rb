@@ -1,11 +1,13 @@
 class User < ActiveRecord::Base
-	has_many :usercards
-	has_many :cards, :through => :usercards 
+	has_many :user_cards
+	has_many :cards, -> { distinct }, :through => :user_cards
 
-	validates :email, uniqueness: true
-	validates :phone, format: { with: /\d{3}-\d{3}-\d{4}/}
-	validates :first_name, presence: true 
-	validates :last_name, presence: true
+	# validates :email, uniqueness: true
+	# validates :phone, format: { with: /\d{3}-\d{3}-\d{4}/}
+	# validates :first_name, presence: true 
+	# validates :last_name, presence: true
+
+
 	# validates :price, :presence => true, :numericality => { :greater_than => 0 }
 
 	before_destroy :destroy_solely_owned_cards

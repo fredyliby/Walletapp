@@ -2,9 +2,9 @@
 <%= form_for Card.new, do |f| %>
   <%= f.label :number %>
   <%= f.text_field :number %>
-  <%= f.label :expiration_month %>
-  <%= f.select :expiration_month, (1..12) %>
-  <%= f.label :expiration_year %>
-  <%= f.select :expiration_year, (2015..2029) %>
+  <%= f.label :expiration %>
+  <%= f.text_field :expiration, "Month" %>
+  <%= f.label :expiration %>
+  <%= f.text_field :expiration, "Year" %>
   <%= f.submit 'Create Card', data: {disable_with: "Submitting..."} %>
 <% end %>

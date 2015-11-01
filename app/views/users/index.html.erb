@@ -1,13 +1,13 @@
-<h1>My Wallet Application</h1>
 
-<% @users.each do |user| %>
-  <div>
-    <%= user.first_name %>
-    <%= link_to 'Cards', card_path(user) %>
-    <%= link_to 'Edit', edit_user_path(user) %>
-  </div>
+	<h1>WELCOME TO WALLET APP !!!!</h1>
 
-<% end %>
+<%= image_tag 'wallet.png' %>
+	<div class="row">
+		<div class='btn-grp' >
+			<%= button_to "signup", new_user_path, :method => :get %>
+			<%= button_to "signin", new_session_path, :method => :get %>
+
+		</div>
+	</div>
 
 
-<p></p>

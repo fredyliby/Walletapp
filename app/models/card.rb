@@ -1,13 +1,14 @@
 class Card < ActiveRecord::Base
-	has_many :users,   :through => :usercards
-	has_many :usercards
+	has_many :users,   :through => :user_cards
+	has_many :user_cards
+  validates :number, :uniqueness => true
 
 
-  # validates :users, presence: true
+  validates :users, presence: true
 
-	# validates :card_number, format: { with: /\d{4}-\d{4}-\d{4}-\d{4}/}
- #  validates :expiration_month, inclusion: {in: (1..12)}
- #  validates :expiration_year, inclusion: {in: (2015..2115)}
+	validates :number, format: { with: /\d{4}-\d{4}-\d{4}-\d{4}/}
+  validates :month, inclusion: {in: (1..12)}
+  validates :year, inclusion: {in: (2015..2115)}
 
   # before_save :set_card_type, :set_expiration_date
 
