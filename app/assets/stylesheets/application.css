@@ -16,7 +16,7 @@
 
 body {
 	text-align:center;
-	background-color:aqua;
+	background-color:#92D490;
 	padding:15px;
 
 }
@@ -28,7 +28,7 @@ body {
     width: 100%;
     margin-left: auto ;
     margin-right: auto ;
-    background-color: #ABCDEF;
+    background-color: #6B8A6F;
 }
 .navbar ul {
     list-style-type: none; 
