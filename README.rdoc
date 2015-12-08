@@ -1,3 +1,5 @@
+=README
+
 ABOUT:
 
   The Wallet app allows users to sign up and share the same credit card.
