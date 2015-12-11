@@ -1,8 +1,16 @@
- <h1>SIGN IN</h1>
- <%= form_tag '/sessions' do  %>
- <%= label_tag :email %>
-<%= text_field_tag :email %><br>
-<%= label_tag :password %>
-<%= text_field_tag :password %><br>
-<%= submit_tag 'sign in' %>
-<% end %>
+<div class="container">
+	<div class="page-wrapper">
+		<div class="row">
+			<div class="col-md-12">
+				<h1> WELCOME BACK!!</h1>
+				<%= form_tag '/sessions' do  %>
+				<%= label_tag :email %>
+				<%= text_field_tag :email %><br>
+				<%= label_tag :password %>
+				<%= text_field_tag :password %><br>
+				<%= submit_tag 'sign in' %>
+				<% end %>
+			</div>
+		</div>
+	</div>
+</div>

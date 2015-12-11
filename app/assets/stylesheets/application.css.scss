@@ -14,6 +14,9 @@
  *= require_self
  */
 
+ @import "bootstrap-sprockets";
+    @import "bootstrap";
+
 body {
 	text-align:center;
 	background-color:#92D490;
@@ -25,24 +28,49 @@ body {
 	}
 
 	.navbar {
-    width: 100%;
+    width: 80%;
     margin-left: auto ;
     margin-right: auto ;
-    background-color: #6B8A6F;
+    background-color: #E639D1;
+    border:1px solid white;
 }
 .navbar ul {
     list-style-type: none; 
     text-align: center;
     margin: 0 auto;
     padding: 0px;
-    border:2px solid #FF0066;
+    /*border:2px solid #FF0066;*/
     display:table;
     overflow: hidden;
 }
 .navbar li{
     float: left;
-    padding: 2px;
-    width: 150px;
+    padding: 10px;
+    width: 100px;
     margin-left: auto ;
     margin-right: auto ;
+}
+.page-wrapper {
+    background-color: #D9852B;
+    margin-top: 15px;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-bottom: 15px;
+    padding-bottom: 25px;
+    border-radius: 30px;
+
+}
+.page-wrapper h1 {
+    font-style: italic;
+    color: #2B7FD9;
+    background-color: #F5F0F5;
+    font-weight: 500;
+    font-family:Georgia sans-serif;
+    
+}
+.page-wrapper2 {
+    background-color: #D9852B;
+    border:2px solid white;
+    padding: 35px;
+
 }
