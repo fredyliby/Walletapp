@@ -1,21 +1,24 @@
 <div class="container">
-<div class="page-wrapper">
-<div class="row">
-<div class="col-md-12">
-<h1>New Credit Card</h1>
-
-<%= form_for @card do |f| %>
-  <%= f.label :number %>
-  <%= f.text_field :number %></br>
-  <%= f.label :expiration %>
-  <%= f.label :month %>
-  <%= f.text_field :month %><br>
-  <%= f.label :year %>
-  <%= f.text_field :year %></br>
-  <%= f.submit 'Create Card', data: {disable_with: "Submitting..."} %><br>
-<% end %>
-</div>
-</div>
+	<div class="page-wrapper">
+		<div class="row">
+			<div class="col-md-12">
+				<h1>New Credit Card</h1>
+				<%= form_for @card do |f| %>
+				<span><%= f.label :Creditcard %></span>
+				<span><%= f.label :number %></span>
+				<span><%= f.text_field :number %></span><br>
+				<span><%= f.label :Expiration %></span>
+				<span><%= f.label :month %></span>
+				<span><%= f.text_field :month %></span><br>
+				<span><%= f.label :Expiration %></span>
+				<span><%= f.label :year %></span>
+				<span><%= f.text_field :year %></span></br> 
+				
+				<%= f.submit 'Create Card', data: {disable_with: "Submitting..."} %><br>
+				<% end %>
+			</div>
+		</div>
+	</div>
 </div>
 
 

@@ -11,6 +11,7 @@ class Card < ActiveRecord::Base
   validates :number, length: { is: 16 }
 
   validates :month, inclusion: {in: (1..12)}
+   validates :card_balance, numericality: true
   
   # before_save :set_card_type, :set_expiration_date
 

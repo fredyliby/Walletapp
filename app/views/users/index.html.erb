@@ -1,19 +1,15 @@
 <div class="container">
-<div class="page-wrapper2">
+	<div class="page-wrapper2">
 	<h1>WELCOME TO WALLET APP !!!!</h1>
-
-<%= image_tag 'wallet.png' %>
-	<div class="row">
-	<div class="col-md-12">
-		<div class='btn-grp ' >
-		<%= button_to "signup", new_user_path, :method => :get %>
-		
-		<%= button_to "signin", new_session_path, :method => :get %>
-
-		</div>
+		<%= image_tag 'wallet.png' %><br>
+		<div class="row">
+			<div class="col-md-12">
+				<div class='btn-grp ' >
+					<%= button_to "signin", new_session_path, :method => :get %>
+				</div>
+			</div>
 		</div>
 	</div>
-	</div>
-	</div>
+</div>
 
 

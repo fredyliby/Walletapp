@@ -30,6 +30,7 @@ class CardsController < ApplicationController
 
 	def show
 		@card = Card.find(params[:id])
+			
 	end
 
 	def destroy
@@ -41,7 +42,7 @@ class CardsController < ApplicationController
 	private
 
 	def card_params
-		params.require(:card).permit(:number, :expiration, :month, :year)
+		params.require(:card).permit(:number, :expiration, :month, :year, )
 	end
 
 end

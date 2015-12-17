@@ -11,7 +11,7 @@ class UsersController < ApplicationController
       session[:user_id] = @user.id
       redirect_to @user
     else
-      flash[:alert] = "There was a problem."
+      flash[:alert] = " OOPS There was a problem."
       render :new
     end 
   end
@@ -34,6 +34,7 @@ class UsersController < ApplicationController
 
    def show
      @user = User.find params[:id]
+
    end
 
 
@@ -65,7 +66,7 @@ class UsersController < ApplicationController
     @user = User.find params[:id]
     @user.destroy!
     session.clear
-    flash[:notice] = "Bye."
+    flash[:notice] = "Bye.Bye!!!"
     redirect_to users_path
   end
 

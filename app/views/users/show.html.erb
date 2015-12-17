@@ -1,9 +1,9 @@
-<h1>SHOW PAGE FOR USER</h1>	
-<h2>WELCOME USER</h2>
-	<%= @user.id%> <br/>
-	<%= @user.first_name %><br/>
-	<%= @user.last_name %><br/>
-	<%= @user.email %><br/>
+<div class="container">	
+<h1>WELCOME USER</h1>
+<h4><%= @user.id%></h4>
+<h4><%= @user.first_name %></h4>
+<h4><%= @user.last_name %></h4>
+<h4><%= @user.email %></h4>
 <table>
 	<% @user.cards.each  do |x| %>
 	<tr>
@@ -14,14 +14,16 @@
 			<%= x.month %>
 		</td>
 		<td>
-			<%= x.year %>
+			 <%= x.year %> 
 		</td>
+		
 	</tr>
 	<% end %>
 </table>
 <br/>
 	<%= form_tag add_card_path, method: :post do %>
-	<%= collection_select(:user_card, :card_id, Card.all, :id, :number, {:prompt => true}) %>
+	<%= collection_select(:user_card, :card_id,  Card.all, :id, :number,  {:prompt => true}) %>
 	<%= hidden_field_tag :user_id, @user.id %>
 	<%= submit_tag "Save" %>
 <% end %>
+</div>

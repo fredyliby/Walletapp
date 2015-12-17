@@ -1,1 +1,35 @@
-<h1>CARDS</h1>
+<div class="container">
+	
+	<div class="row">
+		<div class="col-md-12">
+			<h1>ALL CREDIT CARDS</h1>
+			<% @cards.each do |card| %>
+
+			<table class="mytable">
+				<tr>				
+				<strong><th>User Id</th></strong>		                        
+				<strong><th>Card Number</th></strong>
+				<strong><th>Exp. Month</th></strong>
+				<strong><th>Exp. Year</th></strong>
+				</tr>	
+				<tr>
+					<td>
+						<%= card.id %>
+					</td>
+					<td>
+						<%= card.number %>
+					</td>
+					<td>
+						<%= card.month %>
+					</td>
+					<td>
+						<%= card.year %>
+					</td>
+				</tr>
+			</table>
+			<% end %>
+		</div>
+
+	</div>
+
+</div>
